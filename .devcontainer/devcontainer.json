@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "React + Pocketbase Dev environment",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "web",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.gitconfig-itql,target=/home/node/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.ssh/id_ed25519_itqualab,target=/home/node/.ssh/id_ed25519_itqualab,type=bind,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"extensions.ignoreRecommendations": true
+			},
+			"extensions": [
+				"expo.vscode-expo-tools",
+				"msjsdiag.vscode-react-native",
+				"mhutchie.git-graph",
+				"dsznajder.es7-react-js-snippets",
+				"sourcegraph.cody-ai",
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	},
+	"forwardPorts": [
+		3000,
+		8080
+	]
+}
