@@ -1,6 +1,6 @@
 # Original course
 
-[PocketBase + React Crash Course #1 - Project Setup](https://www.youtube.com/watch?v=ynffHrfYmC4&list=PLipzIa2sjtLwDFbX_HMH52SKJpiAx9Xrv)#
+[PocketBase + React Crash Course #1 - Project Setup](https://www.youtube.com/watch?v=ynffHrfYmC4&list=PLipzIa2sjtLwDFbX_HMH52SKJpiAx9Xrv)
 
 
 
