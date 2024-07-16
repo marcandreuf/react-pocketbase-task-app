@@ -15,14 +15,17 @@ export default function TodoList() {
     console.log('Home page loaded');
     getTasks().then(async (res) => {
       setTasks(res);
-      await sleep(500);
-      setLoading(false); 
+      await sleep(5000);
+      setLoading(false);
+
     });
   }, [])
   return (
     <div>
       {loading ?
       <h1 className='text-3xl mb-2'>Loading...</h1>:
+      tasks.length === 0? 
+      <h1 className='text-3xl mb-2'>No tasks found</h1>:
       tasks.map(task => (
         <div className='text-3xl' key={task.id}>
           <div className='flex flex-row'>
