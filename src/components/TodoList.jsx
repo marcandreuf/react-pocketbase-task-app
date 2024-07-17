@@ -14,12 +14,21 @@ export default function TodoList() {
     setLoading(true);
     console.log('Home page loaded');
     getTasks().then(async (res) => {
+      console.log(`res: ${res}`);
+      if(res){
+        console.log(`res.length: ${res.length}`);
+      }else{
+        console.log('No tasks found');
+      } 
       setTasks(res);
-      await sleep(5000);
+      await sleep(1000);
       setLoading(false);
-
+    }).catch((err) => {
+      console.log(err);
+      setLoading(false);
     });
   }, [])
+
   return (
     <div>
       {loading ?

@@ -1,10 +1,11 @@
 import React, { useState} from 'react'
 import { signup } from '../lib/pocketbase';
+import { useNavigate } from'react-router-dom';
 
 export default function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!username || !password) {
@@ -12,6 +13,7 @@ export default function Signup() {
       return;
     }
     await signup(username, password);
+    navigate('/login');
   }
   return (
     <div>

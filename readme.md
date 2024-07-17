@@ -30,6 +30,11 @@ pnpm run dev
 * Pocketbase admin console: http://localhost:8080/_/
 
 
+Pockebase admin console credentials: test12345678
+Test Users:
+    * Username: test1, Password: 12345678
+    * Username: test2, Password: 12345678
+
 Enjoy !
 
 
